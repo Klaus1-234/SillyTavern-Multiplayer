@@ -15,10 +15,13 @@ README.md - this guide
 2. Copy multiplayer.mjs to plugins/ (next to server.js, NOT inside extensions)
 3. Copy mp-proxy.mjs to your SillyTavern base folder
 4. In config.yaml set:
+
+```
 enableServerPlugins: true
 disableCsrfProtection: true
 whitelistMode: false
 and inside cors: set origin: true and credentials: true (with enabled: true)
+```
 
 PASSWORD:
 In config.yaml: listen: true, basicAuthMode: true, your user/password in basicAuthUser.
