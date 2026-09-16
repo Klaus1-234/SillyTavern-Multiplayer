@@ -29,7 +29,7 @@ In config.yaml: listen: true, basicAuthMode: true, your user/password in basicAu
 1. Copy Extension-Multiplayer/ to data/default-user/extensions/
 2. Refresh the SillyTavern tab and done (no config, no restart, no plugin)
 
-PLAYING:
+#### PLAYING:
 
 Host:
 
@@ -38,7 +38,7 @@ Host:
 
 Keep node mp-proxy.mjs running and point your quick tunnel http there. Share the tunnel URL + the code with your friends. Only the game is visible, your chats are not.
 
-Client:
+#### Client:
 
 1. Paste URL + code and press Connect.
 
