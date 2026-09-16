@@ -1,0 +1,39 @@
+<div id="mp_settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>SillyTavern Multiplayer</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <label for="mp_code">Room code</label>
+            <input id="mp_code" class="text_pole textarea_compact" type="text" placeholder="room code (16+ random: X7kQ9mZ2vB4nR8sT1wY5)" autocomplete="off" />
+            <label for="mp_host_url">Host URL</label>
+            <input id="mp_host_url" class="text_pole textarea_compact" type="text" placeholder="https://midominio.ngrok-free.app" autocomplete="off" />
+            <hr class="sysHR" />
+
+            <div style="font-weight:bold; margin:8px 0 4px">Host</div>
+            <div class="flex-container alignItemsBaseline" style="gap:8px">
+                <button id="mp_create" type="button" class="menu_button"><i class="fa-solid fa-tower-broadcast"></i><span> Create room</span></button>
+                <button id="mp_destroy" type="button" class="menu_button" disabled><i class="fa-solid fa-ban"></i><span> End room</span></button>
+            </div>
+
+            <div style="font-weight:bold; margin:8px 0 4px">Client</div>
+            <div class="flex-container alignItemsBaseline" style="gap:8px">
+                <button id="mp_connect" type="button" class="menu_button"><i class="fa-solid fa-plug"></i><span> Connect</span></button>
+                <button id="mp_disconnect" type="button" class="menu_button" disabled><i class="fa-solid fa-unplug"></i><span> Disconnect</span></button>
+            </div>
+
+            <hr class="sysHR" />
+            <div class="flex-container alignItemsBaseline" style="gap:8px">
+                <span id="mp_status_dot" class="cp-dot off"></span>
+                <span id="mp_status_text">Inactive</span>
+            </div>
+            <div style="margin-top:8px">
+                <span style="font-weight:bold">Players:</span>
+                <span id="mp_players">-</span>
+            </div>
+            <div id="mp_typing" class="mp-typing" style="display:none"></div>
+            <div class="mp-watermark" title="SillyTavern Multiplayer v1.7.10 — created by klaus.1234.">created by <b>klaus.1234.</b></div>
+        </div>
+    </div>
+</div>

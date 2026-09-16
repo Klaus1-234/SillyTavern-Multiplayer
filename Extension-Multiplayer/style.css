@@ -1,0 +1,102 @@
+.cp-dot {
+    width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px;
+    background-color: var(--SmartThemeBorderColor);
+}
+.cp-dot.ok { background-color: #4caf50; box-shadow: 0 0 6px rgba(76, 175, 80, 0.8); }
+.cp-dot.off { background-color: #f44336; }
+.cp-dot.warn { background-color: #ff9800; }
+
+.mp-typing {
+    font-size: calc(var(--mainFontSize) * 0.85);
+    color: var(--SmartThemeQuoteColor);
+    font-style: italic;
+    margin-top: 4px;
+}
+
+.mp-watermark {
+    margin-top: 10px;
+    padding-top: 6px;
+    border-top: 1px solid var(--SmartThemeBorderColor);
+    font-size: calc(var(--mainFontSize) * 0.75);
+    opacity: 0.55;
+    text-align: right;
+    letter-spacing: 0.3px;
+    user-select: none;
+}
+
+.mp-hud-typing {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px auto 10px auto;
+    background: rgba(255, 210, 60, 0.16);
+    border: 1px solid var(--SmartThemeQuoteColor);
+    color: var(--SmartThemeQuoteColor);
+    padding: 6px 14px 6px 16px;
+    border-radius: 999px;
+    font-size: calc(var(--mainFontSize) * 1.0);
+    font-style: italic;
+    font-weight: 700;
+    max-width: 85%;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    backdrop-filter: blur(var(--SmartThemeBlurStrength));
+    width: fit-content;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5), 0 0 10px rgba(255,210,60,0.25);
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+    position: relative;
+    z-index: 5;
+}
+
+.mp-hud-avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--SmartThemeBorderColor);
+    background: var(--SmartThemeBlurTintColor);
+}
+
+#mp_create:disabled, #mp_destroy:disabled, #mp_connect:disabled, #mp_disconnect:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* En modo cliente solo el host genera: atenuar y desactivar botones de
+   generación y el menú que los contiene (el bloqueo real es por JS). */
+body.mp-client #option_regenerate,
+body.mp-client #option_continue,
+body.mp-client #option_impersonate,
+body.mp-client #option_new_bookmark,
+body.mp-client #option_convert_to_group,
+body.mp-client #option_start_new_chat,
+body.mp-client #option_close_chat,
+body.mp-client #option_select_chat,
+body.mp-client #option_delete_mes,
+body.mp-client #option_back_to_main,
+body.mp-client #options_button,
+body.mp-client #mes_continue,
+body.mp-client #mes_impersonate,
+body.mp-client .swipe_left,
+body.mp-client .swipe_right,
+body.mp-client .mes_img_swipe_left,
+body.mp-client .mes_img_swipe_right {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* client mode: hide every message button, own messages get edit only;
+   edit-mode trash (confirm/cancel/delete) is gated in JS by ownership */
+body.mp-client .mes .mes_buttons .mes_button { display: none !important; }
+body.mp-client .mes.mp-own .mes_buttons .mes_edit { display: block !important; }
+body.mp-client .mes.mp-own .mes_edit_buttons .mes_edit_copy,
+body.mp-client .mes.mp-own .mes_edit_buttons .mes_edit_add_reasoning,
+body.mp-client .mes.mp-own .mes_edit_buttons .mes_edit_up,
+body.mp-client .mes.mp-own .mes_edit_buttons .mes_edit_down { display: none !important; }
+
+/* client mode: no wand/extensions menu */
+body.mp-client #extensionsMenuButton { display: none !important; }
