@@ -38,7 +38,7 @@ Host:
 
 Keep node mp-proxy.mjs running and point your quick tunnel http there. Share the tunnel URL + the code with your friends. Only the game is visible, your chats are not.
 
-#### Client:
+Client:
 
 1. Paste URL + code and press Connect.
 
